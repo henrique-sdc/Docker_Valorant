@@ -1,0 +1,39 @@
+# docker compose up -d --build --force-recreate
+version: '3.8'
+name: vava
+
+services:
+
+  db:
+    container_name: vava-db
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=vava
+      - POSTGRES_PASSWORD=vava
+      - POSTGRES_DB=vava
+    volumes:
+      - $VOLUME/postgres/vava/data:/var/lib/postgresql/data
+      - "c:/data-vava.csv:/data-vava.csv"
+
+
+    restart: always
+
+  # account:
+  #   build:
+  #     context: ../Crud_Vava/
+  #     dockerfile: Dockerfile
+  #   image: vava-account:latest
+  #   ports:
+  #     - 8080:8080
+  #   environment:
+      # aqui estamos passando as variáveis de ambiente para o container acesso o banco dentro da rede do docker
+      # note que o "db" abaixo eh o nome do servico do banco de dados acima
+    #   - spring.datasource.url=jdbc:postgresql://db:5432/vava
+    #   - spring.datasource.username=vava
+    #   - spring.datasource.password=vava
+    # restart: always
+    depends_on:
+      - db
+
