@@ -15,25 +15,25 @@ services:
       - POSTGRES_DB=vava
     volumes:
       - $VOLUME/postgres/vava/data:/var/lib/postgresql/data
-      - "c:/data-vava.csv:/data-vava.csv"
+      - "c:/db-vava-oficial.csv:/db-vava-oficial.csv"
 
 
     restart: always
 
   # account:
   #   build:
-  #     context: ../Crud_Vava/
+  #     context: ../Backend_Vava/
   #     dockerfile: Dockerfile
   #   image: vava-account:latest
   #   ports:
   #     - 8080:8080
   #   environment:
-      # aqui estamos passando as variáveis de ambiente para o container acesso o banco dentro da rede do docker
-      # note que o "db" abaixo eh o nome do servico do banco de dados acima
-    #   - spring.datasource.url=jdbc:postgresql://db:5432/vava
-    #   - spring.datasource.username=vava
-    #   - spring.datasource.password=vava
-    # restart: always
-    depends_on:
-      - db
+  #     # aqui estamos passando as variáveis de ambiente para o container acesso o banco dentro da rede do docker
+  #     # note que o "db" abaixo eh o nome do servico do banco de dados acima
+  #     - spring.datasource.url=jdbc:postgresql://db:5432/vava
+  #     - spring.datasource.username=vava
+  #     - spring.datasource.password=vava
+  #   restart: always
+  #   depends_on:
+  #     - db
 
