@@ -19,7 +19,7 @@ Este repositório contém o arquivo de composição do Docker para facilitar a i
 
 ## Pré-requisitos
 
-Certifique-se de ter o Docker instalado em sua máquina. Você pode baixá-lo [aqui]([https://www.python.org/downloads/](https://www.docker.com/products/docker-desktop/)).
+Certifique-se de ter o Docker instalado em sua máquina. Você pode baixá-lo [aqui](https://www.docker.com/products/docker-desktop/).
 
 ## Instalação
 
