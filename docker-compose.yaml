@@ -15,7 +15,7 @@ services:
       - POSTGRES_DB=vava
     volumes:
       - $VOLUME/postgres/vava/data:/var/lib/postgresql/data
-      - "c:/db-vava-oficial.csv:/db-vava-oficial.csv"
+      # - "c:/db-vava-oficial.csv:/db-vava-oficial.csv"
 
 
     restart: always
