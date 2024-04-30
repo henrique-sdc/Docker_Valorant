@@ -13,8 +13,8 @@ services:
       - POSTGRES_USER=vava
       - POSTGRES_PASSWORD=vava
       - POSTGRES_DB=vava
-    volumes:
-      - $VOLUME/postgres/vava/data:/var/lib/postgresql/data
+    # volumes:
+      # - $VOLUME/postgres/vava/data:/var/lib/postgresql/data
       # - "c:/db-vava-oficial.csv:/db-vava-oficial.csv"
 
 
